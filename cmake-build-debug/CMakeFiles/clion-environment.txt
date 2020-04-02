@@ -1,4 +1,0 @@
-ToolSet: 3.1.2 (local)@C:\Users\dspychala\cygwin64
-Options: 
-
-Options:
