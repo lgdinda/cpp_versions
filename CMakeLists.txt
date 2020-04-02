@@ -3,4 +3,8 @@ project(cpp_versions)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(cpp_versions main.cpp)
+set(SOURCE_FILES main.cpp)
+
+add_executable(cpp_versions ${SOURCE_FILES})
+
+add_subdirectory(cpp11)

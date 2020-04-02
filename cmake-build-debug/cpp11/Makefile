@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug/CMakeFiles /cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug/CMakeFiles /cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug/cpp11/CMakeFiles/progress.marks
+	cd /cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 cpp11/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 cpp11/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,71 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 cpp11/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 cpp11/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named cpp_versions
+# Convenience name for target.
+cpp11/CMakeFiles/cpp11.dir/rule:
+	cd /cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 cpp11/CMakeFiles/cpp11.dir/rule
+.PHONY : cpp11/CMakeFiles/cpp11.dir/rule
 
-# Build rule for target.
-cpp_versions: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cpp_versions
-.PHONY : cpp_versions
+# Convenience name for target.
+cpp11: cpp11/CMakeFiles/cpp11.dir/rule
 
-# fast build rule for target.
-cpp_versions/fast:
-	$(MAKE) -f CMakeFiles/cpp_versions.dir/build.make CMakeFiles/cpp_versions.dir/build
-.PHONY : cpp_versions/fast
-
-#=============================================================================
-# Target rules for targets named cpp11
-
-# Build rule for target.
-cpp11: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cpp11
 .PHONY : cpp11
 
 # fast build rule for target.
 cpp11/fast:
-	$(MAKE) -f cpp11/CMakeFiles/cpp11.dir/build.make cpp11/CMakeFiles/cpp11.dir/build
+	cd /cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug && $(MAKE) -f cpp11/CMakeFiles/cpp11.dir/build.make cpp11/CMakeFiles/cpp11.dir/build
 .PHONY : cpp11/fast
 
-main.o: main.cpp.o
+cpp11.o: cpp11.cpp.o
 
-.PHONY : main.o
+.PHONY : cpp11.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/cpp_versions.dir/build.make CMakeFiles/cpp_versions.dir/main.cpp.o
-.PHONY : main.cpp.o
+cpp11.cpp.o:
+	cd /cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug && $(MAKE) -f cpp11/CMakeFiles/cpp11.dir/build.make cpp11/CMakeFiles/cpp11.dir/cpp11.cpp.o
+.PHONY : cpp11.cpp.o
 
-main.i: main.cpp.i
+cpp11.i: cpp11.cpp.i
 
-.PHONY : main.i
+.PHONY : cpp11.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/cpp_versions.dir/build.make CMakeFiles/cpp_versions.dir/main.cpp.i
-.PHONY : main.cpp.i
+cpp11.cpp.i:
+	cd /cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug && $(MAKE) -f cpp11/CMakeFiles/cpp11.dir/build.make cpp11/CMakeFiles/cpp11.dir/cpp11.cpp.i
+.PHONY : cpp11.cpp.i
 
-main.s: main.cpp.s
+cpp11.s: cpp11.cpp.s
 
-.PHONY : main.s
+.PHONY : cpp11.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/cpp_versions.dir/build.make CMakeFiles/cpp_versions.dir/main.cpp.s
-.PHONY : main.cpp.s
+cpp11.cpp.s:
+	cd /cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug && $(MAKE) -f cpp11/CMakeFiles/cpp11.dir/build.make cpp11/CMakeFiles/cpp11.dir/cpp11.cpp.s
+.PHONY : cpp11.cpp.s
 
 # Help Target
 help:
@@ -170,12 +159,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... cpp_versions"
-	@echo "... edit_cache"
 	@echo "... cpp11"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... edit_cache"
+	@echo "... cpp11.o"
+	@echo "... cpp11.i"
+	@echo "... cpp11.s"
 .PHONY : help
 
 
@@ -187,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

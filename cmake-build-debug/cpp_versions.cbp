@@ -5,7 +5,7 @@
 		<Option title="cpp_versions"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cpp11\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug"/>
@@ -79,12 +79,63 @@
 					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="cpp11">
+				<Option output="/cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug/cpp11/cpp11.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug/cpp11"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug/cpp11/Makefile&quot;  VERBOSE=1 cpp11"/>
+					<CompileFile command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug/cpp11/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug/cpp11/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug/cpp11/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cpp11/fast">
+				<Option output="/cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug/cpp11/cpp11.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug/cpp11"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/7.4.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug/cpp11/Makefile&quot;  VERBOSE=1 cpp11/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug/cpp11/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug/cpp11/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j12 -f &quot;/cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug/cpp11/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
+		<Unit filename="/cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cpp11/cpp11.cpp">
+			<Option target="cpp11"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cpp11/cpp11.h">
+			<Option target="cpp11"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/main.cpp">
 			<Option target="cpp_versions"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cpp11/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cpp11\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

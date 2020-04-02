@@ -236,6 +236,12 @@ ProcessorCount_cmd_nproc:FILEPATH=/usr/bin/nproc.exe
 ProcessorCount_cmd_sysctl:FILEPATH=ProcessorCount_cmd_sysctl-NOTFOUND
 
 //Value Computed by CMake
+cpp11_BINARY_DIR:STATIC=/cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug/cpp11
+
+//Value Computed by CMake
+cpp11_SOURCE_DIR:STATIC=/cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cpp11
+
+//Value Computed by CMake
 cpp_versions_BINARY_DIR:STATIC=/cygdrive/c/Users/dspychala/CLionProjects/cpp_versions/cmake-build-debug
 
 //Value Computed by CMake
@@ -348,7 +354,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
