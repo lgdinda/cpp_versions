@@ -31,7 +31,7 @@ void AutomaticTypeDeduction()
     auto point = 2.5;   // double
     auto debt = 1440000000000LL;    // long long
 
-    static const int tmp[] = {0, 0, 0};
+    static const int tmp[] = {0, 1, 2};
     std::vector<int> zeros (tmp,tmp + sizeof(tmp) / sizeof(tmp[0]) );
     FunctionWithAuto(zeros);
 }
@@ -48,6 +48,12 @@ void FunctionWithAuto(const std::vector<int> &arVector)
     }
 
     std::cout << "   this many times I needed to declare iterator type\n";
+
+    //capturing the type of an object or an expression
+    std::cout << "    - decltype\n";
+    typedef decltype(arVector.begin()) CIT;
+    CIT it_prev = --it;
+    std::cout << "   What was the last one? " << *it_prev << std::endl;
 }
 
 int main()
