@@ -5,4 +5,11 @@
 #ifndef CPP_VERSIONS_CPP11_H
 #define CPP_VERSIONS_CPP11_H
 
+#include <vector>
+
+void LambdaExpressions();
+
+void AutomaticTypeDeduction();
+void FunctionWithAuto(const std::vector<int> &arVector);
+
 #endif //CPP_VERSIONS_CPP11_H
