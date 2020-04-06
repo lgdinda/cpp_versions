@@ -12,4 +12,6 @@ void LambdaExpressions();
 void AutomaticTypeDeduction();
 void FunctionWithAuto(const std::vector<int> &arVector);
 
+void UniformInitializationSyntax();
+
 #endif //CPP_VERSIONS_CPP11_H

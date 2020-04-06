@@ -1,5 +1,6 @@
 #include <iostream>
 #include <algorithm>  // for_each
+#include <map>
 #include "cpp11.h"
 
 void LambdaExpressions()
@@ -56,11 +57,65 @@ void FunctionWithAuto(const std::vector<int> &arVector)
     std::cout << "   What was the last one? " << *it_prev << std::endl;
 }
 
+void UniformInitializationSyntax()
+{
+    std::cout << "\n -> Uniform Initialization Syntax\n";
+    // old:
+        // 1. parenthesized
+        std::string s("hello");
+        int a = int();
+        // 2. = notation
+        std::string z = "hello";
+        int b = 1;
+        // 3. POD aggregates
+        int arr[4] = {1, 2, 3, 4};
+        struct tm today{0};
+        // 4. member initializers in constructors
+        struct time{
+            int hour;
+            time(int a):hour(a){}
+        };
+
+    // new:
+    std::cout << "    - uniform brace notation\n";
+        int *c = new int[4]{5, 6, 7, 8}; // !!!
+        class ClassSimpleMembers{
+            int a;
+            int b;
+        public:
+            ClassSimpleMembers(int aa, int bb){}
+        };
+        ClassSimpleMembers csm{0,0};    //old: ClassSimpleMembers csm(0,0);
+
+    std::cout << "    - intuitive containers init\n";
+        std::vector<std::string> vect = {"first", "second", "third"}; // no push_back or temp array!
+        std::map<std::string,std::string> actors = {
+            {"David Harbour", "Jim Hopper"},
+            {"Kevin Spacey", "Francis Underwood"}
+    };
+
+    std::cout << "    - member array initializer\n";
+        class ClassComplexMembers{
+            int c[4];
+        public:
+            ClassComplexMembers(int aa, int bb, int cc, int dd): c{aa,bb,cc,dd}{}
+        };
+
+    std::cout << "    - in-class members initialization\n";
+        class InClass{
+            int x = 5;   // !!!
+        public:
+            InClass();
+        };
+
+}
+
 int main()
 {
     std::cout << "\n\t*** C++11 ***\n\n";
     LambdaExpressions();
     AutomaticTypeDeduction();
+    UniformInitializationSyntax();
 
     return 0;
 }
