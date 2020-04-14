@@ -110,12 +110,34 @@ void UniformInitializationSyntax()
 
 }
 
+void DefaultAndDeleteFunctions()
+{
+    std::cout << "\n -> Default and Delete Functions\n";
+
+    std::cout << "       - default instructs the compiler to generate the default implementation for the function\n";
+    struct A{
+        A() = default;
+        virtual ~A() = default;
+    };
+
+    std::cout << "       - deleted functions are useful for preventing object copying, among the rest\n";
+    struct NoCopy{
+        NoCopy(){};
+        NoCopy & operator =(const NoCopy&) = delete;  // assignment operator
+        NoCopy(const NoCopy&) = delete;               // copy constructor
+    };
+
+    NoCopy a;
+    //NoCopy b(a);  // compilation error, copy constructor is delete
+}
+
 int main()
 {
     std::cout << "\n\t*** C++11 ***\n\n";
     LambdaExpressions();
     AutomaticTypeDeduction();
     UniformInitializationSyntax();
+    DefaultAndDeleteFunctions();
 
     return 0;
 }

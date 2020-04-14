@@ -14,4 +14,6 @@ void FunctionWithAuto(const std::vector<int> &arVector);
 
 void UniformInitializationSyntax();
 
+void DefaultAndDeleteFunctions();
+
 #endif //CPP_VERSIONS_CPP11_H
