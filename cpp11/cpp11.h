@@ -16,4 +16,8 @@ void UniformInitializationSyntax();
 
 void DefaultAndDeleteFunctions();
 
+void NullPtrConstant();
+
+void DelegatingConstructor();
+
 #endif //CPP_VERSIONS_CPP11_H

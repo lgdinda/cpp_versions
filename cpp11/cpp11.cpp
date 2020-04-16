@@ -130,6 +130,49 @@ void DefaultAndDeleteFunctions()
     NoCopy a;
     //NoCopy b(a);  // compilation error, copy constructor is delete
 }
+void f(int){std::cout << "\t- replcaces NULL macro, and the literal 0\n";}
+void f(char *){std::cout << "\t- strongly typed\n";}
+void pf(){std::cout << "\tpointer to function\n";}
+void NullPtrConstant()
+{
+    std::cout << "\n -> nullptr - null pointer constant\n";
+
+    f(0);
+    f(nullptr);
+
+    std::string str = "\tdata pointer";
+    const char *pc=str.c_str(); //data pointers
+    if (pc!=nullptr)
+
+        std::cout<<pc<<std::endl;
+
+    class A{
+    public:
+        static void pmf(){std::cout << "\tpointer to member function\n";}
+    };
+
+    A::pmf();
+    int (A::*pmf)()=nullptr;
+
+    pf();
+    void (*pf)()=nullptr; //pointer to function
+}
+
+void DelegatingConstructor()
+{
+    std::cout << "\n -> Delegating Constructor\n";
+
+    class M{
+        int x, y;
+        char *p;
+
+    public:
+        M(int z):x(z),y(0),p(new char[5]){}
+        M():M(0){std::cout <<"\t - constructor may call another constructor of the same class\n";}
+    };
+
+    M m;
+}
 
 int main()
 {
@@ -138,6 +181,8 @@ int main()
     AutomaticTypeDeduction();
     UniformInitializationSyntax();
     DefaultAndDeleteFunctions();
+    NullPtrConstant();
+    DelegatingConstructor();
 
     return 0;
 }
