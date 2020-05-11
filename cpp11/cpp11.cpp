@@ -188,7 +188,22 @@ void ThreadingLibrary()
     do_work dw;
     std::thread t(dw);
     t.join();
-    t.detach();
+    //t.detach();
+
+    std::cout << "       - async() function - template for launching concurrent tasks\n";
+    // todo ...
+    std::cout << "       - thread_local - storage type for declaring thread-unique data\n";
+    // todo ...
+
+}
+
+void NewSmartPointers()
+{
+    std::cout << "\n -> New Smart Pointers\n";
+    std::cout << "       - shared_ptr\n";
+     // todo ...
+    std::cout << "       - unique_ptr\n";
+    // todo ...
 }
 
 int main()
@@ -201,6 +216,8 @@ int main()
     NullPtrConstant();
     DelegatingConstructor();
     ThreadingLibrary();
+    NewSmartPointers();
+
 
     return 0;
 }

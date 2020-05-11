@@ -22,4 +22,6 @@ void DelegatingConstructor();
 
 void ThreadingLibrary();
 
+void NewSmartPointers();
+
 #endif //CPP_VERSIONS_CPP11_H
