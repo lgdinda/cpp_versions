@@ -1,6 +1,8 @@
 #include <iostream>
 #include <algorithm>  // for_each
 #include <map>
+#include <thread>
+
 #include "cpp11.h"
 
 void LambdaExpressions()
@@ -174,6 +176,21 @@ void DelegatingConstructor()
     M m;
 }
 
+void ThreadingLibrary()
+{
+    std::cout << "\n -> Threading Library\n";
+
+    class do_work {
+    public:
+        void operator()(){};  //function call operator
+    };
+
+    do_work dw;
+    std::thread t(dw);
+    t.join();
+    t.detach();
+}
+
 int main()
 {
     std::cout << "\n\t*** C++11 ***\n\n";
@@ -183,6 +200,7 @@ int main()
     DefaultAndDeleteFunctions();
     NullPtrConstant();
     DelegatingConstructor();
+    ThreadingLibrary();
 
     return 0;
 }

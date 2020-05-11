@@ -20,4 +20,6 @@ void NullPtrConstant();
 
 void DelegatingConstructor();
 
+void ThreadingLibrary();
+
 #endif //CPP_VERSIONS_CPP11_H
