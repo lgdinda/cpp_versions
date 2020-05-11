@@ -8,8 +8,8 @@
 void LambdaExpressions()
 {
     std::cout << "\n -> Lambda Expressions\n";
-    // define functions locally, at the place of the call
-    // [capture](parameters)->return-type {body}
+    std::cout << "       - define functions locally, at the place of the call\n";
+    std::cout << "         [capture](parameters)->return-type {body}\n\n";
 
     char sentence[] = "How many Upper Case characters do I contain?";
     int Uppercase = 0;
@@ -27,7 +27,7 @@ void LambdaExpressions()
 void AutomaticTypeDeduction()
 {
     std::cout << "\n -> Automatic Type Deduction\n";
-    // declare object without specifying type
+    std::cout << "       - auto - declare object without specifying type\n\n";
 
     auto zero = 0;      // int
     auto c = 'c';       // char
