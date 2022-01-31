@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="XCH_USER_XDB_CAD@172.20.210.107" uuid="ab6a0143-4099-44d6-ad14-2ea37c345c37">
+      <driver-ref>oracle</driver-ref>
+      <synchronize>true</synchronize>
+      <remarks>pdev-xch01</remarks>
+      <auto-commit>false</auto-commit>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@172.20.210.107:1789:eedb</jdbc-url>
+    </data-source>
+  </component>
+</project>
