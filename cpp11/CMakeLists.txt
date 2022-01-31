@@ -11,3 +11,7 @@ set(SOURCE_FILES
    )
 
 add_executable(cpp11 ${SOURCE_FILES})
+
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package(Threads REQUIRED)
+target_link_libraries(cpp11 Threads::Threads)
