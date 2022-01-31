@@ -1,9 +1,9 @@
 #include <iostream>
-#include <algorithm>  // for_each
 #include <map>
-#include <thread>
+#include <string>
 
-#include "cpp11.h"
+
+#include "cpp14.h"
 
 using namespace std;
 void SmallImprovements()
@@ -25,16 +25,25 @@ void SmallImprovements()
 
     auto a = 0B0100'0111;
     if(a==b) cout << "0b01000111 == 0B0100'0111" <<endl;
-
 }
 
+auto ProveAutomaticReturnTypeDeduction()
+{
+    cout << "\n -> Automatic Return Type Deduction\n";
+    /*double a = 123;
+    double b = 456;
+    auto result = a*b;*/
 
+    std::map< std::string, std::string > result;
+    result.insert(make_pair("key","value"));
+    return result;
+}
 
 int main()
 {
     std::cout << "\n\t*** C++14 ***\n\n";
     SmallImprovements();
-
+    auto CoolMap = ProveAutomaticReturnTypeDeduction();
 
     return 0;
 }

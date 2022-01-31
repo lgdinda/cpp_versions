@@ -8,6 +8,8 @@
 #include <vector>
 
 void SmallImprovements();
+auto ProveAutomaticReturnTypeDeduction();
+
 
 
 #endif //CPP_VERSIONS_CPP14_H
