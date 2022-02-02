@@ -9,6 +9,7 @@
 
 void SmallImprovements();
 auto ProveAutomaticReturnTypeDeduction();
+void RelaxedConstexprFunctions();
 
 
 

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include <cassert>
 
 
 #include "cpp14.h"
@@ -39,11 +40,50 @@ auto ProveAutomaticReturnTypeDeduction()
     return result;
 }
 
+int Fibonacci(int n)
+{
+    switch(n)
+    {
+        case 0: return 0;
+        case 1: return 1;
+        default:
+            return Fibonacci(n-2)+Fibonacci(n-1);
+    }
+}
+constexpr int FibonacciCompileTime(int n)
+{
+    switch(n)
+    {
+        case 0: return 0;
+        case 1: return 1;
+        default:
+            return FibonacciCompileTime(n-2)+FibonacciCompileTime(n-1);
+    }
+}
+
+void RelaxedConstexprFunctions()
+{
+    cout << "\n -> constexpr functions (executed at compile time) relaxed\n";
+    cout << "       - C++14 relaxed highly constrined C++11 constexpr requirements: \n";
+    cout << "           - local variables possible \n";
+    cout << "           - control flow statements possible (if/else, switch, while, for, ...) \n";
+
+    int n=10;
+    cout << "\nFibonacci(" <<10<<")="<<FibonacciCompileTime(n)<<endl;
+
+    static_assert(FibonacciCompileTime(10)==55,"Unexpected Fibonacci number."); // n cannot be used at compile time
+    assert(Fibonacci(n)==55); // n can be used at run time
+    //static_assert(FibonacciCompileTime(10)==5,"Unexpected Fibonacci number."); // error at compile time
+    //assert(Fibonacci(n)==5); // error at run time
+
+}
+
 int main()
 {
     std::cout << "\n\t*** C++14 ***\n\n";
     SmallImprovements();
     auto CoolMap = ProveAutomaticReturnTypeDeduction();
+    RelaxedConstexprFunctions();
 
     return 0;
 }
