@@ -7,6 +7,33 @@
 #include "cpp14.h"
 
 using namespace std;
+
+// for Tempalete Variables
+
+//value of PI for generic type
+template<typename T>
+constexpr T PI = T(3.141592653589793238462643383);
+
+template<typename T>
+constexpr T maxValue = T(1000);
+
+template<>
+constexpr double maxValue<double> = 2000;
+
+template<>
+constexpr char maxValue<char> = 'Z';
+
+void TemplateVariables()
+{
+    cout << "\n -> Template Variables\n";
+    cout << "\nPI<int>     : " << PI<int> << endl;
+    cout << "PI<double>  : " << PI<double> << endl;
+    cout << "PI<float>   : " << PI<float> << endl;
+    cout << "\nMaxValue<int>     : " << maxValue<int> << endl;
+    cout << "MaxValue<double>  : " << maxValue<double> << endl;
+    cout << "MaxValue<char>    : " << maxValue<char> << endl;
+}
+
 void SmallImprovements()
 {
     cout << "\n -> Small Improvements\n";
@@ -78,12 +105,14 @@ void RelaxedConstexprFunctions()
 
 }
 
+
 int main()
 {
     std::cout << "\n\t*** C++14 ***\n\n";
     SmallImprovements();
     auto CoolMap = ProveAutomaticReturnTypeDeduction();
     RelaxedConstexprFunctions();
+    TemplateVariables();
 
     return 0;
 }

@@ -10,6 +10,7 @@
 void SmallImprovements();
 auto ProveAutomaticReturnTypeDeduction();
 void RelaxedConstexprFunctions();
+void TemplateVariables();
 
 
 
