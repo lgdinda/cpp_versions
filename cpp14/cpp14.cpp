@@ -106,6 +106,25 @@ void RelaxedConstexprFunctions()
 }
 
 
+void DoSomething()
+{
+    cout << "\nI'm doing something the obsolete way\n";
+}
+
+void DoSomethingBetter()
+{
+    cout << "I'm doing something in a way\n";
+}
+void DeprecatedAttribute()
+{
+    cout << "\n -> Deprecated Attribute\n";
+    cout << "       - discouraging programmer for using a method which is going to be progressively removed\n";
+    cout << "         by giving warning to a compiler\n";
+    DoSomething();
+    DoSomethingBetter();
+}
+
+
 int main()
 {
     std::cout << "\n\t*** C++14 ***\n\n";
@@ -113,6 +132,7 @@ int main()
     auto CoolMap = ProveAutomaticReturnTypeDeduction();
     RelaxedConstexprFunctions();
     TemplateVariables();
+    DeprecatedAttribute();
 
     return 0;
 }

@@ -12,6 +12,11 @@ auto ProveAutomaticReturnTypeDeduction();
 void RelaxedConstexprFunctions();
 void TemplateVariables();
 
+[[deprecated("DoSomething() is inefficient. Use DoSomethingBetter() instead")]]
+void DoSomething();
+void DoSomethingBetter();
+void DeprecatedAttribute();
+
 
 
 #endif //CPP_VERSIONS_CPP14_H
